@@ -2,6 +2,9 @@ import express from 'express';
 import cors from "cors";
 import dotenv from "dotenv";
 import appointmentRoutes from "./routes/appointments";
+import 'dotenv/config';
+
+
 dotenv.config();
 
 //Initialize express app
