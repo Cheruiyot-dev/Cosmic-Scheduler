@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from "cors";
 import dotenv from "dotenv";
-import { log } from 'console';
+import appointmentRoutes from "./routes/appointments";
 dotenv.config();
 
 //Initialize express app
@@ -13,11 +13,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 
-//Base route
-app.get("/", (req, res) => {
-    res.send("Welcome to Cosmic Scheduler API");
-});
+//Routes
+app.use("/api/appointments", appointmentRoutes);
 
+
+// Base route
+app.get("/", (req, res) => {
+    res.send("Cosmic Scheduler Backend");
+  });
 
 //Server startup
 const PORT = process.env.PORT || 3001;
