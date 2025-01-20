@@ -3,6 +3,7 @@
 import './App.css'
 import { CssBaseline, Box, Typography } from '@mui/material'
 import { SchedulerForm } from './components/SchedulerForm'
+import { DatePickerComponent } from './components/DatePickerComponent'
 
 const App:React.FC = () => {
 
@@ -15,7 +16,9 @@ const App:React.FC = () => {
       <Typography variant = "subtitle1" align = "center">
         Schedule your appointments with ease
       </Typography>
+      <DatePickerComponent/>
       <SchedulerForm/>
+      
     </Box>
 
   )
